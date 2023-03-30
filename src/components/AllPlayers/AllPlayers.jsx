@@ -38,12 +38,17 @@ const AllPlayers = () => {
 
   const handleUnSelectPlayer = (id) => {
     const previousPlayerdata = JSON.parse(localStorage.getItem("players"));
-    const isMatch = previousPlayerdata.find((pd) => pd.id == id);
-    if (isMatch) {
-      const restOfplayer = previousPlayerdata.filter((pd) => pd.id != id);
-      localStorage.setItem("players", JSON.stringify(restOfplayer));
-      setLeaderBoard(restOfplayer);
-      swal("Yes!!", "Successfully Removed", "success");
+
+    if (previousPlayerdata) {
+      const isMatch = previousPlayerdata.find((pd) => pd.id == id);
+      if (isMatch) {
+        const restOfplayer = previousPlayerdata.filter((pd) => pd.id != id);
+        localStorage.setItem("players", JSON.stringify(restOfplayer));
+        setLeaderBoard(restOfplayer);
+        swal("Yes!!", "Successfully Removed", "success");
+      } else {
+        swal("Sorry", "Player Not Added Yet", "error");
+      }
     } else {
       swal("Sorry", "Player Not Added Yet", "error");
     }

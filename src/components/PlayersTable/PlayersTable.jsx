@@ -2,10 +2,10 @@ import React from "react";
 
 const PlayersTable = ({ playerBoard }) => {
   let price = 0;
-  for (let p of playerBoard) {
-    price = price + p.price;
-  }
-  
+  // for (let p of playerBoard) {
+  //   price = price + p.price;
+  // }
+
   let serialNo = 1;
   return (
     <div>
