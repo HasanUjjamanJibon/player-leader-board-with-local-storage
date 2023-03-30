@@ -14,9 +14,10 @@ const LeaderBoard = ({ leaderBoard }) => {
     localStorage.removeItem("players");
     setPlayerBorad([]);
   };
+
   return (
     <div className="sticky top-0 col-span-1 hidden lg:block">
-      <h2 className="font-bold bg-teal-200 text-center py-4 px-2">
+      <h2 className="font-bold bg-teal-200 text-center mt-2 py-4 px-2 rounded-t-lg rounded-r-lg">
         Players List :
       </h2>
 

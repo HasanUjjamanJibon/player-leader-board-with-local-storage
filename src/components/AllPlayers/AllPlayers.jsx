@@ -56,7 +56,7 @@ const AllPlayers = () => {
 
   return (
     <div className="grid grid-cols-4 gap-6 container mx-auto my-10">
-      <div className="col-span-4 lg:col-span-3 md:grid md:grid-cols-2 lg:grid-cols-3 gap-4 px-4">
+      <div className="col-span-4 lg:col-span-3 grid  grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 px-4">
         {players.map((player) => (
           <SinglePlayer
             key={player.id}

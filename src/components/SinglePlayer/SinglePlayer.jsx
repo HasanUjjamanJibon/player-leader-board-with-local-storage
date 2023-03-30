@@ -11,20 +11,22 @@ const SinglePlayer = ({ player, handleSelectPlayer, handleUnSelectPlayer }) => {
       <div className="card-body">
         <h2 className="card-title">Name : {name}</h2>
         <p>{about}</p>
-        <p className="font-bold">Job : {job}</p>
-        <p className="font-bold text-xl">Price : ${price}</p>
-        <div className="card-actions justify-end">
+
+        <span className="font-bold">Job : {job}</span>
+        <span className="font-bold text-xl">Price : ${price}</span>
+
+        <div className="card-actions justify-between">
           <button
-            className="btn btn-primary btn-sm text-md w-full"
+            className="btn btn-primary btn-sm text-md "
             onClick={() => handleSelectPlayer(id, picture, name, price)}
           >
-            Select Players
+            Add Players
           </button>
           <button
-            className="btn btn-primary btn-sm text-md w-full"
+            className="btn btn-primary btn-sm text-md"
             onClick={() => handleUnSelectPlayer(id)}
           >
-            UnSelect Players
+            Remove Players
           </button>
         </div>
       </div>
