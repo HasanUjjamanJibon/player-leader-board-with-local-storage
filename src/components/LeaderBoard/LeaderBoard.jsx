@@ -10,12 +10,23 @@ const LeaderBoard = ({ leaderBoard }) => {
     setPlayerBorad(PlayerBoardsList);
   }, [leaderBoard]);
 
+  const cleartable = () => {
+    localStorage.removeItem("players");
+    setPlayerBorad([]);
+  };
   return (
-    <div className="sticky top-10 col-span-1">
+    <div className="sticky top-0 col-span-1 hidden lg:block">
       <h2 className="font-bold bg-teal-200 text-center py-4 px-2">
         Players List :
       </h2>
+
       <PlayersTable playerBoard={playerBoard}></PlayersTable>
+      <button
+        onClick={() => cleartable()}
+        className="btn btn-error my-4 w-full"
+      >
+        Clear All{" "}
+      </button>
     </div>
   );
 };
