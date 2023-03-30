@@ -16,13 +16,13 @@ const SinglePlayer = ({ player, handleSelectPlayer, handleUnSelectPlayer }) => {
         <div className="card-actions justify-end">
           <button
             className="btn btn-primary btn-sm text-md w-full"
-            onClick={(e) => handleSelectPlayer(id, picture, name, price)}
+            onClick={() => handleSelectPlayer(id, picture, name, price)}
           >
             Select Players
           </button>
           <button
             className="btn btn-primary btn-sm text-md w-full"
-            onClick={(e) => handleUnSelectPlayer(id)}
+            onClick={() => handleUnSelectPlayer(id)}
           >
             UnSelect Players
           </button>

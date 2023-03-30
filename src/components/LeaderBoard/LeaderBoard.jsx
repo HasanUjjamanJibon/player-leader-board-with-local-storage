@@ -10,7 +10,7 @@ const LeaderBoard = ({ leaderBoard }) => {
     setPlayerBorad(PlayerBoardsList);
   }, [leaderBoard]);
 
-  const cleartable = () => {
+  const clearTable = () => {
     localStorage.removeItem("players");
     setPlayerBorad([]);
   };
@@ -22,10 +22,10 @@ const LeaderBoard = ({ leaderBoard }) => {
 
       <PlayersTable playerBoard={playerBoard}></PlayersTable>
       <button
-        onClick={() => cleartable()}
+        onClick={() => clearTable()}
         className="btn btn-error my-4 w-full"
       >
-        Clear All{" "}
+        Clear All
       </button>
     </div>
   );

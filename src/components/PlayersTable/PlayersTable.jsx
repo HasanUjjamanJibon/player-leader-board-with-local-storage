@@ -1,17 +1,17 @@
 import React from "react";
 
 const PlayersTable = ({ playerBoard }) => {
-  let price = 0;
-  // for (let p of playerBoard) {
-  //   price = price + p.price;
+  // let price = 0;
+  // for (let pr of playerBoard) {
+  //   price = price + pr.price;
   // }
 
   let serialNo = 1;
   return (
     <div>
-      <span className="text-xl font-semibold capitalize py-2 inline-block">
+      {/* <span className="text-xl font-semibold capitalize py-2 inline-block">
         Total Cost : ${price}
-      </span>
+      </span> */}
       <table className="w-full text-center border-2 border-b-0  ">
         <thead>
           <tr className="border-2 border-b-0">
